@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    
+    
+    
+    <servlet>
+        <servlet-name>
+            First 
+        </servlet-name>
+        <servlet-class>
+            com.servelets.serverltFirst
+        </servlet-class>
+    </servlet>
+    
+        
+    <servlet>
+        <servlet-name>
+            Second 
+        </servlet-name>
+        <servlet-class>
+            com.servelets.tut2
+        </servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>
+            doPost 
+        </servlet-name>
+        <servlet-class>
+            com.servelets.RegisterServlet
+        </servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>
+            doGet 
+        </servlet-name>
+        <servlet-class>
+            com.servelets.MyServlet
+        </servlet-class>
+    </servlet>
+<servlet-mapping>
+      <servlet-name> First </servlet-name>
+      <url-pattern> /web </url-pattern>
+</servlet-mapping>
+  
+ <servlet-mapping>
+      <servlet-name> doPost </servlet-name>
+      <url-pattern> /RegisterServlet </url-pattern>
+</servlet-mapping> 
+<servlet-mapping>
+      <servlet-name> Second</servlet-name>
+      <url-pattern> /sec </url-pattern>
+</servlet-mapping>
+    <servlet-mapping>
+      <servlet-name> doGet</servlet-name>
+      <url-pattern> /doGet </url-pattern>
+</servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
